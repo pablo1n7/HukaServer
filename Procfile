@@ -1,1 +1,1 @@
-web: gunicorn hukapp:app
+web: gunicorn app:app
