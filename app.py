@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, request, jsonify
 
 app = Flask(__name__)
 
@@ -8,6 +8,16 @@ def paint():
     return render_template('index.html')
 
 
-@app.route('/setEspecies', methods=['POST'])
+
+@app.route('/setEspecies', methods=["POST"])
 def especie():
-    print('hola')
+
+    if request.method == "POST":
+        json_dict = request.get_json()
+        data = {'resp': 'prueba',}
+        return jsonify(data)
+    else:
+
+        return """<html><body>
+        Something went horribly wrong
+        </body></html>"""
