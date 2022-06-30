@@ -14,6 +14,7 @@ def especie():
 
     if request.method == "POST":
         json_dict = request.get_json()
+        print(json_dict)
         data = {'resp': 'prueba',}
         return jsonify(data)
     else:
