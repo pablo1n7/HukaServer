@@ -21,7 +21,7 @@ def especie():
         json_dict = request.get_json()
         print(json_dict)
         df = pd.DataFrame(json_dict)
-        df.to_csv('data.csv')
+        df.to_csv('data.csv', index=0)
         data = {'resp': 'prueba',}
         return jsonify(data)
     else:
