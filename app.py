@@ -8,9 +8,9 @@ app = Flask(__name__)
 def paint():
     try:
         d = pd.read_csv('data.csv')
-    except:
         return d.to_html()
-    return render_template('index.html')
+    except:
+        return render_template('index.html')
 
 
 
