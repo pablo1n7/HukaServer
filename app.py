@@ -9,7 +9,7 @@ def paint():
 
 
 
-@app.route('/setEspecies', methods=["POST"])
+@app.route('/setEspecies', methods=["POST", "GET"])
 def especie():
 
     if request.method == "POST":
